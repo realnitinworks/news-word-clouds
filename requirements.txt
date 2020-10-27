@@ -8,3 +8,4 @@ sgmllib3k==1.0.0
 Werkzeug==1.0.1
 requests
 beautifulsoup4
+wordcloud
