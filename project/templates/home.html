@@ -11,7 +11,7 @@
         Too busy to click on each news article to see what it's about? Below you can see all the articles from the BBC front page, displayed as word clouds. If you want to read more about any particular article, just click on the wordcloud to go to the original article
     </p>
     {% for article in articles %}
-        <p>{{ article }}</p>
+        <img src="data:image/png;base64,{{ article }}" alt="wordcloud image">
     {% endfor %}
 </body>
 </html>

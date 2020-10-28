@@ -1,12 +1,12 @@
 # pull official base image
 FROM python:3.8.1-alpine
 
-# install numpy dependencies in alpine
+# install wordcloud dependencies
 RUN apk update
 RUN apk add make automake gcc g++ subversion python3-dev 
-
-# install Pillow dependencies
-RUN apk add jpeg-dev zlib-dev
+RUN apk add --no-cache jpeg-dev zlib-dev
+RUN apk add --no-cache freetype-dev
+RUN pip install pillow
 
 # set working directory
 WORKDIR /usr/src/app
