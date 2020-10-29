@@ -2,6 +2,9 @@ import feedparser
 import requests
 import base64
 import io
+from collections import namedtuple
+
+
 from flask import Flask, render_template
 from bs4 import BeautifulSoup
 from wordcloud import WordCloud
@@ -9,6 +12,7 @@ from wordcloud import WordCloud
 
 BBC_FEED = "http://feeds.bbci.co.uk/news/world/rss.xml"
 LIMIT = 2
+Article = namedtuple('Article', 'url image')
 
 
 # instantiate the Flask app
@@ -45,7 +49,10 @@ def get_wordcloud(text):
 def home():
     feed = feedparser.parse(BBC_FEED)
     articles = [
-        get_wordcloud(parse_article(article['link']))
+        Article(
+            url=article['link'],
+            image=get_wordcloud(parse_article(article['link']))
+        )
         for article in feed['entries'][:LIMIT]
     ]
 
