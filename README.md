@@ -30,6 +30,13 @@ This step starts the Flask web application in a docker container listening on po
 
 3. Open browser at **127.0.0.1:5000** to see the word cloud
 
+## Tear-down Application
+
+While still inside the news-word-clouds, execute the following command
+```
+# docker-compose down
+```
+
 
 
 
