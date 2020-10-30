@@ -24,6 +24,7 @@ This application could be run locally using Docker like so:
 
 This step starts the Flask web application in a docker container listening on port 5000
 ```
+# cd news-word-clouds
 # docker-compose up -d --build
 ```
 
