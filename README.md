@@ -1,5 +1,5 @@
 # News Word Clouds
-A web application for building Word Cloud from news artciles using Python and Flask.
+A web application for building Word Cloud from news articles using Python and Flask.
 
 ## Word Cloud
 Word clouds are a popular way to visualise large amounts of text. Word clouds are images showing scattered words in different sizes, where words that appear more frequently in the given text are larger, and less common words are smaller or not shown at all.
